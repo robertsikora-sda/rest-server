@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import java.util.stream.Collectors;
 
 @Controller
-public class UserControllerView {
+class UserControllerView {
 
     private UserService userService;
 

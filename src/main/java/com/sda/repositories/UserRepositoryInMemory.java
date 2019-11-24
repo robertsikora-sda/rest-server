@@ -12,8 +12,8 @@ import java.util.stream.Stream;
 @Repository
 public class UserRepositoryInMemory implements UserRepository {
 
-    private AtomicInteger idGenerator = new AtomicInteger();
-    private Map<Integer, User> users = new HashMap<>();
+    private final AtomicInteger idGenerator = new AtomicInteger();
+    private final Map<Integer, User> users = new HashMap<>();
 
     @Override
     public Stream<User> listAll() {
