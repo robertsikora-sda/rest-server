@@ -43,7 +43,7 @@ class UserControllerApi {
     @PostMapping("/users")
     public ResponseEntity<User> save(@RequestBody User user) {
         User createdUser = userService.saveUser(user);
-        return ResponseEntity.created(URI.create(String.format("/users/{%s}", createdUser.getId()))).build();
+        return ResponseEntity.created(URI.create(String.format("/users/%s", createdUser.getId()))).build();
     }
 
     @DeleteMapping("/users/{id}")

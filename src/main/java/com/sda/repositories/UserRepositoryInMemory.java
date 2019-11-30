@@ -29,7 +29,8 @@ public class UserRepositoryInMemory implements UserRepository {
     public User save(User user) {
         Integer id = idGenerator.incrementAndGet();
         user.setId(id);
-        return users.put(user.getId(), user);
+        users.put(user.getId(), user);
+        return user;
     }
 
     @Override
